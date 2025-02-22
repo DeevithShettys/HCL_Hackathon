@@ -8,13 +8,17 @@ import { LoginComponent } from './healthcareApp/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { CommonModule } from '@angular/common'; 
+import { RegistrationComponent} from './healthcareApp/registration/registration.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    RegistrationComponent
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule,
