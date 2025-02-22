@@ -1,0 +1,22 @@
+.sidebar {
+    height: 100vh; /* Full height of the viewport */
+    position: fixed; /* Stick it to the left */
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    border-right: 1px solid #ddd; /* Optional border */
+  }
+  
+  .nav-link {
+    color: #333;
+    font-size: 18px;
+  }
+  
+  .nav-link:hover {
+    background-color: #f8f9fa; /* Highlight on hover */
+  }
+  
+  .main-content {
+    margin-left: 25%; /* Push the content to the right of the sidebar */
+    padding: 20px;
+  }

@@ -1,0 +1,25 @@
+.navbar .navbar-brand {
+  font-size: 24px; /* Adjust font size if needed */
+}
+
+.navbar .navbar-nav .nav-link {
+  font-size: 18px; /* Adjust font size if needed */
+}
+
+/* Ensure the brand/logo is centered on the first line */
+.navbar .row:first-child {
+  padding-bottom: 10px; /* Add space between the two lines if needed */
+}
+
+/* Ensure the navigation links are centered in the second line */
+.navbar .navbar-collapse {
+  justify-content: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+  .navbar .navbar-brand,
+  .navbar .navbar-nav {
+    text-align: center;
+  }
+}
