@@ -1,0 +1,20 @@
+<div class="container-fluid">
+  <div class="row">
+    <!-- Left sidebar -->
+    <div class="col-3 sidebar bg-light">
+      <h2>Bayer Health</h2>
+      <nav class="nav flex-column">
+        <a class="nav-link active" href="/patient/dashboard">Dashboard</a>
+        <a class="nav-link" href="/patient/profile">My Profile</a>
+        <a class="nav-link" href="/patient/wellness-goals">Wellness Goals</a>
+        <a class="nav-link" href="/patient/messages">Messages</a>
+        <a class="nav-link" href="/login">Logout</a>
+      </nav>
+    </div>
+
+    <!-- Main content area -->
+    <div class="col-9 main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

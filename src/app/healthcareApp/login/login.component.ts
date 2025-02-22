@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { HttpRequestService } from '../../_service/http-request.service';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +21,8 @@ export class LoginComponent {
   constructor(
     private http: HttpClient,
     private router: Router,
-    private toastr: ToastrService
+    private toastr: ToastrService,
+    private httpService: HttpRequestService
   ) {
     this.loginForm = new FormGroup({
       username: new FormControl('', [Validators.required, Validators.email]), // Email validation
@@ -37,19 +39,23 @@ export class LoginComponent {
         username: this.username,
         password: this.password,
       };
+      // Considering if user id is provider@gmail.com the this is provider account
       if (
         this.loginForm.get('username')?.value.toLowerCase() ===
-        'admin@gmail.com'
+        'provider@gmail.com'
       ) {
         this.toastr.success('Login successful! Welcome back', 'Success');
         this.router.navigate(['/provider']);
+        // Considering if user id is patient@gmail.com the this is patient account
       } else if (
         this.loginForm.get('username')?.value.toLowerCase() ===
         'patient@gmail.com'
       ) {
         this.toastr.success('Login successful! Welcome back', 'Success');
         this.router.navigate(['/patient']);
-      } else {
+      }
+      // If user enters other than this then erroring out as this is for error scenario 
+      else {
         this.toastr.error('User not found, Please register..', 'Error');
       }
     }

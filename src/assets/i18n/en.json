@@ -1,0 +1,10 @@
+{
+	"GLOBAL": {
+        "login":"Login"
+    },
+    "ValidationMessage":
+    {
+       "invalidEmailError": "Email is required and must be valid",
+       "invalidPasswordError":"Password is required (minimum length: 6)"
+    }
+}
